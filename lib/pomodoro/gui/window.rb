@@ -12,8 +12,8 @@ module Pomodoro
       }
 
       AUDIO_ASSETS = {
-        start: "assets/sounds/start.mp3",
-        rest: "assets/sounds/rest.mp3"
+        start: "assets/sounds/start.wav",
+        rest: "assets/sounds/rest.wav"
       }
 
       FONT_ASSETS = {
