@@ -50,7 +50,7 @@ module Pomodoro
           @images[:rest].draw(104, 364, 1)
         end
 
-        @font.draw("This is your pomodoro ##{@cycles.to_s.rjust(2, '0')}", 20, 268, 3, 1, 1, Gosu::Color::BLACK)
+        @font.draw("Pomodoro ##{@cycles.to_s.rjust(2, '0')}", 78, 268, 3, 1, 1, Gosu::Color::BLACK)
         @font_time.draw("#{(@t + @seconds).strftime('%M:%S')}", 92, 292, 3, 1, 1, @timer_colour)
       end
 
