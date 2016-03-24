@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'pomodoro/gui'
+require 'optparse'
+
+include Pomodoro::Gui
+
+# Default options
+options = {
+  rest: 5,
+  interval: 25
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: pomodoro-gui [options]'
+
+  opts.on_tail '--version', 'Show version' do
+    puts "pomodoro-gui v#{Pomodoro::Gui::VERSION}"
+    exit
+  end
+
+  opts.on(
+    '-r', '--rest [REST]', 'Choose rest time (in minutes)'
+  ) do |s|
+    options[:rest] = s.to_i
+  end
+
+  opts.on(
+    '-i', '--interval [INTERVAL]', 'Choose pomodoro length time (in minutes)'
+  ) do |s|
+    options[:interval] = s.to_i
+  end
+
+  opts.on_tail '-h', '--help', 'Show this message' do
+    puts opts
+    exit
+  end
+end.parse!
+
+Pomodoro::Gui.init options
