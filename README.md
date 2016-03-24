@@ -2,7 +2,11 @@
 
 [![GemVersion](https://badge.fury.io/rb/pomodoro-gui.svg)](http://badge.fury.io/rb/pomodoro-gui)
 
+![pomodoro-gui](https://dl.dropboxusercontent.com/u/17948653/Proyectos/pomodoro-gui/pomodoro-gui.png)
+
 Just a simple Pomodoro with a minimal graphical interface made in Ruby with the help of Gosu made for fun.
+
+**IMPORTANT**: Gosu maybe not interpret the graphical coordinates the same way on differents OSs, so the position of the graphical elements may vary. This is just a test made for fun.
 
 ## About
 
