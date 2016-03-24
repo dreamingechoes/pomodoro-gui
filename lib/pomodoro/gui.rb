@@ -13,5 +13,9 @@ module Pomodoro
       end
     end
 
+    def self.root
+      File.dirname __dir__
+    end
+
   end
 end

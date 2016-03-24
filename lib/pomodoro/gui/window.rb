@@ -75,15 +75,15 @@ module Pomodoro
 
       def load_assets
         IMAGE_ASSETS.each do |key, value|
-          @images[key] = Gosu::Image.new(value)
+          @images[key] = Gosu::Image.new(File.join(Pomodoro::Gui.root, "..", value))
         end
 
         AUDIO_ASSETS.each do |key, value|
-          @audio[key] = Gosu::Song.new(self, value)
+          @audio[key] = Gosu::Song.new(self, File.join(Pomodoro::Gui.root, "..", value))
         end
 
-        @font = Gosu::Font.new(self, FONT_ASSETS[:font], 32)
-        @font_time = Gosu::Font.new(self, FONT_ASSETS[:bold], 64)
+        @font = Gosu::Font.new(self, File.join(Pomodoro::Gui.root, "..", FONT_ASSETS[:font]), 32)
+        @font_time = Gosu::Font.new(self, File.join(Pomodoro::Gui.root, "..", FONT_ASSETS[:bold]), 64)
       end
 
       def reset_timer
